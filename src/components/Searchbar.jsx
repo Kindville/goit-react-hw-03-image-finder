@@ -1,6 +1,7 @@
 import { Component } from "react"
-import styles from './styles.css'
 // import { toast } from 'react-toastify'
+
+import styles from './styles.css'
 
 export class Searchbar extends Component{
     state = {
@@ -40,5 +41,6 @@ export class Searchbar extends Component{
             />
     </form>
     </header> 
+    
     )
 }}
