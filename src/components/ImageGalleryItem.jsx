@@ -4,7 +4,7 @@ export const ImageGalleryItem = ({  description, smallImage, largeImage, openMod
     return (
        
             <li className="gallery-item" onClick={openModal}>
-            <img src={smallImage} alt={description} data={largeImage}/>
+            <img src={smallImage} alt={description} data-large={largeImage}/>
            </li>
     )
 }

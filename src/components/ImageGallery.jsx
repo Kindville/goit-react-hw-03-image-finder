@@ -2,9 +2,8 @@ import { ImageGalleryItem } from "./ImageGalleryItem";
 import PropTypes from 'prop-types';
 
 export const ImageGallery = ({ images, openModal }) => {
-console.log(images);
   return (
-    <ul className="gallery">
+    <ul >
      {images.map(({id, description, smallImage, largeImage})=> (
         < ImageGalleryItem
               key={id}

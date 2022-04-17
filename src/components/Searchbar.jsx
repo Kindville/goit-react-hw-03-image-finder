@@ -1,6 +1,6 @@
 import { Component } from "react"
 // import { toast } from 'react-toastify'
-
+import Notiflix from 'notiflix';
 import styles from './styles.css'
 
 export class Searchbar extends Component{
@@ -15,7 +15,7 @@ export class Searchbar extends Component{
     e.preventDefault()
     
     if (this.state.images.trim() === '') {
-        alert("Please, Fill Required Field!");
+        Notiflix.Notify.failure("Please, specify your search.");
             return
         }
         this.props.onSubmit(this.state.images)
