@@ -1,11 +1,13 @@
-import { ImageGalleryItem } from "./ImageGalleryItem";
 import PropTypes from 'prop-types';
+import { ImageGalleryItem } from "./ImageGalleryItem";
+import './styles.css'
+
 
 export const ImageGallery = ({ images, openModal }) => {
   return (
-    <ul >
+    <ul className="ImageGallery">
      {images.map(({id, description, smallImage, largeImage})=> (
-        < ImageGalleryItem
+        < ImageGalleryItem 
               key={id}
               smallImage={smallImage}
               largeImage={largeImage}

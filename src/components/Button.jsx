@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-
+import './styles.css'
 export const Button = ({onLoadMore}) => {
 return(
-        <button type='button' onClick={onLoadMore}> Load more</button>
+        <button className='Button' type='button' onClick={onLoadMore}> Load more</button>
 )
 }
 

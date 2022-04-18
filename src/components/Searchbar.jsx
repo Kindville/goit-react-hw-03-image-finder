@@ -1,7 +1,7 @@
 import { Component } from "react"
 // import { toast } from 'react-toastify'
 import Notiflix from 'notiflix';
-import styles from './styles.css'
+import './styles.css'
 
 export class Searchbar extends Component{
     state = {
@@ -15,7 +15,7 @@ export class Searchbar extends Component{
     e.preventDefault()
     
     if (this.state.images.trim() === '') {
-        Notiflix.Notify.failure("Please, specify your search.");
+        Notiflix.Notify.warning("Please, specify your search.");
             return
         }
         this.props.onSubmit(this.state.images)
@@ -24,14 +24,14 @@ export class Searchbar extends Component{
 
  render() {     
  return (
-    <header className="searchbar">
-        <form className="form" onSubmit={this.handleSubmit} style={styles.form}>
-            <button type="submit" className="button">
-            <span className="button-label">Search</span>
+    <header className="Searchbar">
+        <form className="SearchForm" onSubmit={this.handleSubmit} >
+            <button type="submit" className="SearchForm-button">
+            <span className="SearchForm-button-label">Search</span>
             </button>
 
             <input
-            className="input"
+            className="SearchForm-input"
             type="text"
             value={this.state.images}
             onChange={this.handleChange}

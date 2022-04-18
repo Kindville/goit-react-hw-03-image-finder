@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-
+import './styles.css'
 export const ImageGalleryItem = ({  description, smallImage, largeImage, openModal }) => {
     return (
        
-            <li className="gallery-item" onClick={openModal}>
-            <img src={smallImage} alt={description} data-large={largeImage}/>
+            <li className="ImageGalleryItem" onClick={()=>openModal(largeImage)}>
+            <img className="ImageGalleryItem-image"  src={smallImage} alt={description} />
            </li>
     )
 }
