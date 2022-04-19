@@ -23,6 +23,7 @@ export class App extends Component{
     error: null,   
     showModal: false,
     modalImg: '',
+    loadMoreBtn: false
   }
   
   componentDidUpdate(prevProps, prevState) {
@@ -60,6 +61,7 @@ export class App extends Component{
         })
       .catch(error => this.setState({error}))
     }
+    
       if (prevState.page !== page && page !== 1) {
        this.setState({ loading: true })
 
@@ -82,7 +84,7 @@ export class App extends Component{
                 images: [...images, ...imagesList],
                 perPage: perPage + imagesList.length,
                  loading: false,                            
-
+loadMoreBtn: false,
               };
             });
           })
