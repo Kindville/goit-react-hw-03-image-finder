@@ -1,5 +1,6 @@
 import { Component } from "react"
 // import { toast } from 'react-toastify'
+import { FaSearch } from "react-icons/fa";
 import Notiflix from 'notiflix';
 import './styles.css'
 
@@ -26,7 +27,8 @@ export class Searchbar extends Component{
  return (
     <header className="Searchbar">
         <form className="SearchForm" onSubmit={this.handleSubmit} >
-            <button type="submit" className="SearchForm-button">
+             <button type="submit" className="SearchForm-button">
+                 <FaSearch size={14}/>
             <span className="SearchForm-button-label">Search</span>
             </button>
 
